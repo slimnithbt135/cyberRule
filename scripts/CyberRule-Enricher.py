@@ -4,8 +4,9 @@ import re
 from time import time
 
 # --- Configuration ---
-INPUT_FILE = "./data/cve_2023_preprocessed.json"
-OUTPUT_FILE = "./data/cve_2023_enriched.json"
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+INPUT_FILE = os.path.join(PROJECT_ROOT, "data", "cve_2023_preprocessed.json")
+OUTPUT_FILE = os.path.join(PROJECT_ROOT, "data", "cve_2023_enriched.json")
 MAX_CVES = 2000
 
 # ====================== EXTENDED PATTERN DICTIONARIES ======================
