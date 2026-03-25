@@ -526,15 +526,15 @@ if __name__ == '__main__':
     # Evaluate command
     eval_parser = subparsers.add_parser('evaluate', help='Evaluate Llama 3.3')
     eval_parser.add_argument('--reference', default='evaluation/reference_standard_200.json')
-    eval_parser.add_argument('--output', default='evaluation/llama3_evaluation.json')
+    eval_parser.add_argument('--output', default='data/llama3_evaluation.json')
     eval_parser.add_argument('--max', type=int, default=100)
     eval_parser.add_argument('--no-bootstrap', action='store_true', help='Skip bootstrap CI calculation')
     
     # Compare command
     compare_parser = subparsers.add_parser('compare', help='Compare CyberRule vs Llama 3.3')
     compare_parser.add_argument('--cyberrule', default='evaluation/cyberrule_evaluation.json')
-    compare_parser.add_argument('--llama', default='evaluation/llama3_evaluation.json')
-    compare_parser.add_argument('--output', default='evaluation/statistical_comparison.json')
+    compare_parser.add_argument('--llama', default='data/llama3_evaluation.json')
+    compare_parser.add_argument('--output', default='data/statistical_comparison.json')
     
     args = parser.parse_args()
     
