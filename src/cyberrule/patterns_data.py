@@ -4,237 +4,38 @@ Hardcoded pattern dictionaries from CyberRule-Enricher.py
 Author: Thabet Slimani <thabet.slimani@gmail.com>
 """
 
-# Vulnerability Types (100+ patterns)
-VULN_PATTERNS = {
-    # Web Application Vulnerabilities
-    r'\bXSS\b|\bcross.?site scripting\b': 'CrossSiteScripting',
-    r'\bSQLi?\b|\bSQL injection\b': 'SQLInjection',
-    r'\bCSRF\b|\bcross.?site request forgery\b': 'CSRF',
-    r'\bSSRF\b|\bserver.?side request forgery\b': 'SSRF',
-    r'\bXXE\b|\bXML external entity\b': 'XXE',
-    r'\bLFI\b|\blocal file inclusion\b': 'LocalFileInclusion',
-    r'\bRFI\b|\bremote file inclusion\b': 'RemoteFileInclusion',
-    r'\bopen redirect\b': 'OpenRedirect',
-    r'\bCRLF injection\b': 'CRLFInjection',
-    r'\bSSTI\b|\bserver.?side template injection\b': 'ServerSideTemplateInjection',
-    r'\bHTTP header injection\b': 'HTTPHeaderInjection',
-    r'\bHTTP response splitting\b': 'HTTPResponseSplitting',
+# Vulnerability Types (16 patterns)
+CYBERRULE_PATTERNS = {
+    "VulnerabilityType": r"buffer overflow|stack overflow|heap overflow|integer overflow|integer underflow|arithmetic overflow|use-after-free|UAF|double free|memory corruption|memory leak|denial of service|DoS|distributed denial of service|DDoS|SQL injection|SQLi|blind SQL injection|cross-site scripting|XSS|stored XSS|reflected XSS|DOM XSS|command injection|code injection|OS command injection|path traversal|directory traversal|arbitrary file upload|unrestricted file upload|remote code execution|RCE|arbitrary code execution|ACE|privilege escalation|local privilege escalation|LPE|horizontal privilege escalation|vertical privilege escalation|information disclosure|information exposure|sensitive data exposure|authentication bypass|authorization bypass|session fixation|session hijacking|clickjacking|cross-site request forgery|CSRF|open redirect|SSRF|server-side request forgery|XML external entity|XXE|insecure deserialization|prototype pollution|race condition|time-of-check time-of-use|TOCTOU|format string vulnerability|integer truncation|sign extension error|type confusion|out-of-bounds read|out-of-bounds write|OOB read|OOB write|heap-based buffer overflow|stack-based buffer overflow",
     
-    # Authentication/Authorization
-    r'\bauthn?\b|\bauthentication bypass\b': 'AuthenticationBypass',
-    r'\bsession fixation\b': 'SessionFixation',
-    r'\binsecure direct object reference\b': 'InsecureDirectObjectReference',
-    r'\bweak password policy\b': 'WeakPasswordPolicy',
-    r'\bcredential stuffing\b': 'CredentialStuffing',
-    r'\bbrute force\b': 'BruteForceAttack',
+    "AttackVector": r"remote attacker|local attacker|network adjacent|physical access|wireless|bluetooth|WiFi|LAN|WAN|internet|web-based|email|malicious file|crafted file|malicious packet|crafted packet|malicious URL|phishing|social engineering|man-in-the-middle|MitM",
     
-    # Memory Corruption
-    r'\bbuffer overflow\b': 'BufferOverflow',
-    r'\bheap overflow\b': 'HeapOverflow',
-    r'\bstack overflow\b': 'StackOverflow',
-    r'\buse.?after.?free\b': 'UseAfterFree',
-    r'\bdouble free\b': 'DoubleFree',
-    r'\bmemory leak\b': 'MemoryLeak',
-    r'\bwild pointer\b': 'WildPointer',
+    "AttackComplexity": r"low complexity|high complexity|easily exploitable|difficult to exploit|trivial to exploit|requires user interaction|no user interaction required|authentication required|no authentication required|single factor|multi-factor",
     
-    # Injection Attacks
-    r'\bcommand injection\b': 'CommandInjection',
-    r'\bOS command injection\b': 'OSCommandInjection',
-    r'\bLDAP injection\b': 'LDAPInjection',
-    r'\bXPath injection\b': 'XPathInjection',
-    r'\bmail command injection\b': 'MailCommandInjection',
+    "ProductType": r"wordpress plugin|wordpress theme|joomla extension|drupal module|chrome extension|firefox extension|browser extension|mobile application|iOS app|Android app|web application|web service|REST API|SOAP API|desktop application|client software|server software|firmware|BIOS|UEFI|driver|kernel module|operating system|OS|database|DBMS|network device|router|switch|firewall|VPN|IoT device|smart device|SCADA system|industrial control system|ICS|medical device|automotive software|cloud service|SaaS|PaaS|IaaS",
     
-    # Configuration Issues
-    r'\bmisconfiguration\b': 'Misconfiguration',
-    r'\bdefault credentials\b': 'DefaultCredentials',
-    r'\bdebug mode enabled\b': 'DebugModeEnabled',
-    r'\bbackdoor\b': 'Backdoor',
+    "Weakness": r"improper input validation|improper output validation|improper access control|missing authentication|missing authorization|insufficient sanitization|insufficient escaping|improper neutralization|hard-coded credentials|default password|weak password|weak encryption|weak cryptography|cleartext transmission|cleartext storage|session fixation|insecure session management|insecure deserialization|untrusted deserialization|improper certificate validation|improper SSL validation|improper TLS validation|NULL pointer dereference|use of hard-coded cryptographic key|improper privilege management|improper permission assignment|improper resource shutdown|uncontrolled resource consumption|infinite loop|unreachable exit condition|improper exception handling|improper error handling|information exposure through error message|verbose error message|sensitive information in URL|sensitive information in log|debug mode enabled|test functionality enabled",
     
-    # Cloud/Container Security
-    r'\bcontainer escape\b': 'ContainerEscape',
-    r'\bprivilege escalation\b': 'PrivilegeEscalation',
-    r'\bIAM misconfiguration\b': 'IAMMisconfiguration',
-    r'\bunauthenticated access\b': 'UnauthenticatedAccess',
-    r'\bexposed (API|endpoint)\b': 'ExposedAPI',
+    "Impact": r"execute arbitrary code|arbitrary command execution|arbitrary file read|arbitrary file write|arbitrary file deletion|sensitive information disclosure|data theft|data exfiltration|credential theft|password theft|session hijacking|account takeover|system crash|application crash|service disruption|service outage|unauthorized access|unauthorized read|unauthorized write|unauthorized deletion|privilege escalation|privilege reduction|security bypass|protection bypass|policy bypass",
     
-    # Network Security
-    r'\bman.?in.?the.?middle\b|\bMITM\b': 'ManInTheMiddle',
-    r'\bDNS spoofing\b': 'DNSSpoofing',
-    r'\bARP spoofing\b': 'ARPSpoofing',
-    r'\bIP spoofing\b': 'IPSpoofing',
-    r'\bBGP hijacking\b': 'BGPHijacking',
+    "AttackRequirement": r"authenticated user|unauthenticated attacker|low privilege user|high privilege user|administrator access|root access|system access|local access|physical access|network access|adjacent network access|user interaction|victim interaction|administrator interaction|specific configuration|default configuration|particular setup",
     
-    # Cryptographic Issues
-    r'\bweak (crypto|encryption)\b': 'WeakCryptography',
-    r'\bweak SSL\b': 'WeakSSL',
-    r'\bself-signed certificate\b': 'SelfSignedCertificate',
-    r'\bcertificate verification\b': 'CertificateVerification',
-    r'\binsufficient entropy\b': 'InsufficientEntropy',
+    "AffectedComponent": r"web interface|admin panel|management interface|API endpoint|REST endpoint|SOAP endpoint|database|configuration file|log file|session cookie|authentication module|authorization module|file upload component|image processing|video processing|audio processing|PDF parser|XML parser|JSON parser|HTML parser|script engine|template engine|plugin system|extension system|kernel|driver|firmware|bootloader|hypervisor|virtual machine|container|docker|kubernetes",
     
-    # Protocol Vulnerabilities
-    r'\bHTTP request smuggling\b': 'HTTPRequestSmuggling',
-    r'\bDNS cache poisoning\b': 'DNSCachePoisoning',
-    r'\bNTP amplification\b': 'NTPAmplification',
-    r'\bSMTP injection\b': 'SMTPInjection',
+    "ExploitTechnique": r"heap spraying|return-oriented programming|ROP|jump-oriented programming|JOP|code reuse|gadget chain|format string attack|integer overflow attack|buffer overflow attack|stack smashing|heap feng shui|use-after-free exploit|type confusion exploit|prototype pollution attack|prototype chain pollution|DOM clobbering|XSS filter bypass|WAF bypass|IDS bypass|IPS bypass|anti-virus bypass|sandbox escape|container escape|privilege escalation exploit",
     
-    # Hardware/Firmware
-    r'\bSpectre\b': 'Spectre',
-    r'\bMeltdown\b': 'Meltdown',
-    r'\bRowhammer\b': 'Rowhammer',
-    r'\bCold Boot\b': 'ColdBoot',
+    "BypassedControl": r"same-origin policy|SOP|content security policy|CSP|XSS filter|WAF|web application firewall|IDS|intrusion detection system|IPS|intrusion prevention system|anti-virus|endpoint protection|sandbox|ASLR|address space layout randomization|DEP|data execution prevention|NX bit|stack canary|stack guard|CFI|control flow integrity|SafeSEH|SEHOP",
     
-    # Windows-specific
-    r'\bDLL hijacking\b': 'DLLHijacking',
-    r'\bDLL injection\b': 'DLLInjection',
-    r'\bWindows privilege escalation\b': 'WindowsPrivilegeEscalation',
+    "CryptoIssue": r"weak encryption|weak hashing|MD5|SHA1|DES|RC4|weak random number generator|predictable random|insufficient entropy|hard-coded key|hard-coded IV|improper key management|improper certificate validation|self-signed certificate|expired certificate|weak SSL|weak TLS|SSLv2|SSLv3|TLS 1\.0|downgrade attack|padding oracle|timing attack|side-channel attack",
     
-    # Linux-specific
-    r'\bLinux privilege escalation\b': 'LinuxPrivilegeEscalation',
-    r'\bsymlink attack\b': 'SymlinkAttack',
-    r'\bTOCTOU\b': 'TOCTOU',
+    "Protocol": r"HTTP|HTTPS|FTP|SFTP|SSH|Telnet|SMTP|SMTPS|POP3|POP3S|IMAP|IMAPS|DNS|DNSSEC|DHCP|SNMP|LDAP|LDAPS|Kerberos|NTLM|SMB|CIFS|NFS|RDP|VNC|X11|ICMP|TCP|UDP|IP|IPv4|IPv6|BGP|OSPF|RIP|VRRP|HSRP|WiFi|WPA|WPA2|WPA3|WEP|Bluetooth|BLE|Zigbee|Z-Wave|Modbus|OPC|OPC UA|DNP3|IEC 61850",
     
-    # Mobile Security
-    r'\bAndroid intent hijacking\b': 'AndroidIntentHijacking',
-    r'\biOS jailbreak\b': 'iOSJailbreak',
-    r'\bmobile MITM\b': 'MobileMITM'
+    "ProgrammingLanguage": r"C|C\+\+|Java|Python|JavaScript|TypeScript|PHP|Ruby|Perl|Go|Golang|Rust|Swift|Kotlin|Objective-C|C#|VB\.NET|Visual Basic|PowerShell|Bash|Shell script|Assembly|ASM|SQL|PL/SQL|T-SQL|HTML|CSS|XML|JSON|YAML|Markdown|LaTeX",
+    
+    "FileType": r"executable|EXE|DLL|SO|binary|script|batch file|shell script|PDF|ZIP|tar|gz|bz2|7z|RAR|image file|JPEG|JPG|PNG|GIF|BMP|TIFF|SVG|video file|MP4|AVI|MKV|MOV|audio file|MP3|WAV|FLAC|document|DOC|DOCX|XLS|XLSX|PPT|PPTX|database file|DB|SQLite|MySQL|PostgreSQL|configuration file|CONF|INI|XML|JSON|YAML|log file|LOG",
+    
+    "Hardware": r"CPU|processor|GPU|graphics card|memory|RAM|ROM|flash memory|SSD|HDD|hard drive|storage|network card|NIC|WiFi card|Bluetooth adapter|USB controller|PCIe|PCI|BIOS|UEFI|firmware|microcontroller|MCU|FPGA|ASIC|embedded system|SoC|system on chip|IoT device|sensor|actuator|PLC|industrial controller",
+    
+    "Severity": r"critical|high severity|medium severity|low severity|informational|CVSS [0-9]\.[0-9]|base score [0-9]\.[0-9]|temporal score [0-9]\.[0-9]|environmental score [0-9]\.[0-9]"
 }
 
-# Vendor/Product Patterns (150+ entries)
-PRODUCT_PATTERNS = {
-    # Network Security Vendors
-    r'\bPalo Alto Networks\b|\bPAN-OS\b': 'PaloAlto_PAN-OS',
-    r'\bCisco\b': 'Cisco',
-    r'\bFortinet\b|\bFortiOS\b': 'Fortinet_FortiOS',
-    r'\bCheck Point\b': 'CheckPoint',
-    r'\bJuniper\b|\bJunos\b': 'Juniper_Junos',
-    
-    # Web Servers
-    r'\bApache\b': 'Apache',
-    r'\bNginx\b': 'Nginx',
-    r'\bIIS\b': 'IIS',
-    r'\bTomcat\b': 'Tomcat',
-    r'\bJetty\b': 'Jetty',
-    
-    # Databases
-    r'\bMySQL\b': 'MySQL',
-    r'\bPostgreSQL\b|\bPostgres\b': 'PostgreSQL',
-    r'\bMongoDB\b': 'MongoDB',
-    r'\bOracle\b': 'OracleDB',
-    r'\bSQL Server\b': 'SQLServer',
-    r'\bRedis\b': 'Redis',
-    r'\bCassandra\b': 'Cassandra',
-    
-    # Cloud Providers
-    r'\bAWS\b': 'AWS',
-    r'\bAzure\b': 'Azure',
-    r'\bGCP\b|\bGoogle Cloud\b': 'GCP',
-    r'\bKubernetes\b|\bk8s\b': 'Kubernetes',
-    r'\bDocker\b': 'Docker',
-    r'\bOpenShift\b': 'OpenShift',
-    
-    # Operating Systems
-    r'\bLinux kernel\b': 'Linux_Kernel',
-    r'\bWindows\b': 'Windows',
-    r'\bmacOS\b': 'macOS',
-    r'\bAndroid\b': 'Android',
-    r'\biOS\b': 'iOS',
-    
-    # Programming Languages/Frameworks
-    r'\bPHP\b': 'PHP',
-    r'\bPython\b': 'Python',
-    r'\bJava\b': 'Java',
-    r'\bNode\.?js\b': 'NodeJS',
-    r'\b\.NET\b': 'DotNet',
-    r'\bDjango\b': 'Django',
-    r'\bSpring\b': 'SpringFramework',
-    r'\bRuby on Rails\b': 'RubyOnRails',
-    r'\bLaravel\b': 'Laravel',
-    
-    # Web Browsers
-    r'\bChrome\b': 'Chrome',
-    r'\bFirefox\b': 'Firefox',
-    r'\bSafari\b': 'Safari',
-    r'\bEdge\b': 'Edge',
-    r'\bInternet Explorer\b|\bIE\b': 'InternetExplorer',
-    
-    # CMS/E-commerce
-    r'\bWordPress\b': 'WordPress',
-    r'\bDrupal\b': 'Drupal',
-    r'\bJoomla\b': 'Joomla',
-    r'\bMagento\b': 'Magento',
-    r'\bShopify\b': 'Shopify',
-    
-    # Networking Equipment
-    r'\bRouterOS\b': 'MikroTik_RouterOS',
-    r'\bASA\b': 'Cisco_ASA',
-    r'\bIOS\b': 'Cisco_IOS',
-    r'\bNX-OS\b': 'Cisco_NX-OS',
-    
-    # Security Products
-    r'\bSophos\b': 'Sophos',
-    r'\bMcAfee\b': 'McAfee',
-    r'\bSymantec\b': 'Symantec',
-    r'\bTrend Micro\b': 'TrendMicro',
-    
-    # Virtualization
-    r'\bVMware\b': 'VMware',
-    r'\bHyper-V\b': 'HyperV',
-    r'\bKVM\b': 'KVM',
-    r'\bXen\b': 'Xen',
-    
-    # IoT Devices
-    r'\bIoT device\b': 'IoT_Device',
-    r'\bIP camera\b': 'IP_Camera',
-    r'\bNAS\b': 'NAS_Device',
-    r'\bRouter\b': 'Router',
-    r'\bSmart TV\b': 'SmartTV'
-}
-
-# Component Types (50+ patterns)
-COMPONENT_TYPES = {
-    r'\bpanorama appliances?\b': 'NetworkAppliance',
-    r'\bweb interface\b': 'WebInterface',
-    r'\badmin panel\b': 'AdminPanel',
-    r'\bAPI\b': 'API',
-    r'\bbrowser\b': 'WebBrowser',
-    r'\bserver\b': 'Server',
-    r'\bclient\b': 'Client',
-    r'\bdatabase\b': 'Database',
-    r'\bcloud instance\b': 'CloudInstance',
-    r'\bcontainer\b': 'Container',
-    r'\bvirtual machine\b|\bVM\b': 'VirtualMachine',
-    r'\bmicroservice\b': 'Microservice',
-    r'\bendpoint\b': 'Endpoint',
-    r'\bfirewall\b': 'Firewall',
-    r'\bproxy\b': 'Proxy',
-    r'\bgateway\b': 'Gateway',
-    r'\bload balancer\b': 'LoadBalancer',
-    r'\bauthentication service\b': 'AuthService',
-    r'\bpayment gateway\b': 'PaymentGateway',
-    r'\bmessage queue\b': 'MessageQueue',
-    r'\bcache\b': 'Cache',
-    r'\bCDN\b': 'CDN',
-    r'\bDNS server\b': 'DNSServer',
-    r'\bmail server\b': 'MailServer',
-    r'\bVPN\b': 'VPN'
-}
-
-# Privilege Levels (20+ patterns)
-# Change FROM:
-PRIVILEGE_PATTERNS = {
-    r'\bauthenticated\b': 'AuthenticatedUser',  # Already good
-    r'\badmin\b|\badministrator\b': 'Administrator',  # Already good
-    r'\bread.?write\b': 'ReadWriteAccess',  # Change from 'read |write'
-    r'\broot\b': 'RootAccess',  # Already good
-    r'\bprivileged\b': 'PrivilegedUser',  # Already good
-    r'\bsuperuser\b': 'Superuser',  # Already good
-    r'\bsystem\b': 'System',  # Already good
-    r'\bnetwork\b': 'NetworkAdmin',  # Already good
-    r'\bdomain admin\b': 'DomainAdmin',  # Change from 'domain  admin'
-    r'\bguest\b': 'Guest',  # Already good
-    r'\banonymous\b': 'Anonymous',  # Already good
-    r'\bremote user\b': 'RemoteUser',  # Change from 'remote  user'
-    r'\blocal user\b': 'LocalUser',  # Change from 'local  user'
-    r'\bservice account\b': 'ServiceAccount',  # Change from 'service  account'
-    r'\bAPI user\b': 'APIUser',  # Already good
-}
