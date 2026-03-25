@@ -3,7 +3,6 @@
 Regex Baseline for CVE Entity Extraction
 A middle-ground baseline between simple keyword matching and CyberRule.
 Uses curated regex patterns with basic normalization but no contextual constraints.
-
 Author: Thabet Slimani
 """
 
@@ -434,9 +433,9 @@ def evaluate_regex_baseline(reference_file: str, output_file: str):
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser(description='Regex Baseline Evaluator')
-    parser.add_argument('--reference', default='evaluation/reference_standard_200.json',
+    parser.add_argument('--reference', default='data/reference_standard_200.json',
                         help='Path to reference standard JSON')
-    parser.add_argument('--output', default='evaluation/regex_baseline_evaluation.json',
+    parser.add_argument('--output', default='data/regex_baseline_evaluation.json',
                         help='Path to save evaluation results')
     args = parser.parse_args()
     
