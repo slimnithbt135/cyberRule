@@ -1,5 +1,5 @@
 # cd the working directory
-cd ....\cyberonto-llm-enrichment
+cd ....\cyberRule
 # Test mode (no input file)
 python run_extractor.py --test
 
