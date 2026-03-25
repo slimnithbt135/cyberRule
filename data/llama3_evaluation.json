@@ -1,0 +1,3347 @@
+{
+  "system": "Llama 3.3 70B (Groq)",
+  "model": "llama-3.3-70b-versatile",
+  "total_cves": 151,
+  "overall_metrics": {
+    "precision": 0.462,
+    "recall": 0.125,
+    "f1": 0.197,
+    "tp": 6,
+    "fp": 7,
+    "fn": 42
+  },
+  "avg_run_variance": 0.31,
+  "total_variance_entities": 47,
+  "bootstrap_ci": {
+    "precision": {
+      "mean": 0.43366284936871924,
+      "std": 0.09895576590072397,
+      "median": 0.42857142857142855,
+      "ci_lower": 0.25625000000000014,
+      "ci_upper": 0.6429147465437788,
+      "ci_percent": 95.0
+    },
+    "recall": {
+      "mean": 0.07801102994300059,
+      "std": 0.021904400949224977,
+      "median": 0.07692307692307693,
+      "ci_lower": 0.03845541401273886,
+      "ci_upper": 0.12418300653594772,
+      "ci_percent": 95.0
+    },
+    "f1": {
+      "mean": 0.1314138193264657,
+      "std": 0.03441225563175374,
+      "median": 0.13030614870079754,
+      "ci_lower": 0.0670391061452514,
+      "ci_upper": 0.2040871187184551,
+      "ci_percent": 95.0
+    },
+    "n_iterations": 1000
+  },
+  "per_cve_results": [
+    {
+      "cve_id": "CVE-2023-0326",
+      "predicted": [
+        "Information Disclosure"
+      ],
+      "actual": [],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [
+          "Information Disclosure"
+        ],
+        [
+          "Information Disclosure"
+        ],
+        [
+          "Information Disclosure"
+        ]
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0074",
+      "predicted": [
+        "Cross-Site Scripting"
+      ],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [
+          "Cross-Site Scripting"
+        ],
+        [
+          "Cross-Site Scripting"
+        ],
+        [
+          "Cross-Site Scripting"
+        ]
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0842",
+      "predicted": [
+        "Prototype Pollution"
+      ],
+      "actual": [
+        "Cwe1321"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [
+          "Prototype Pollution"
+        ],
+        [
+          "Prototype Pollution"
+        ],
+        [
+          "Prototype Pollution"
+        ]
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0726",
+      "predicted": [
+        "Cross-Site Request Forgery"
+      ],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "Cross-Site Request Forgery"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0665",
+      "predicted": [],
+      "actual": [
+        "Cwe285"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0398",
+      "predicted": [
+        "Cross-Site Request Forgery"
+      ],
+      "actual": [
+        "CrossSiteRequestForgery"
+      ],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "Cross-Site Request Forgery"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0287",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1898",
+      "predicted": [],
+      "actual": [
+        "Cwe330"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0235",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-20040",
+      "predicted": [],
+      "actual": [
+        "UnrestrictedFileUpload",
+        "Cwe23",
+        "Cisco"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1417",
+      "predicted": [],
+      "actual": [
+        "IncorrectAuthorization",
+        "Cwe639"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0091",
+      "predicted": [],
+      "actual": [
+        "IncorrectAuthorization"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0087",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0264",
+      "predicted": [],
+      "actual": [
+        "AuthenticationBypass"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 3,
+      "all_runs": [
+        [],
+        [
+          "Authentication Bypass",
+          "Impersonation",
+          "Information Disclosure"
+        ],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0643",
+      "predicted": [],
+      "actual": [
+        "Cwe167"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0697",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1754",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-2007",
+      "predicted": [],
+      "actual": [
+        "Cwe667",
+        "Cwe367"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0077",
+      "predicted": [
+        "Buffer Overflow",
+        "Integer Overflow"
+      ],
+      "actual": [],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "run_variance": 2,
+      "all_runs": [
+        [
+          "Buffer Overflow",
+          "Integer Overflow"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1944",
+      "predicted": [],
+      "actual": [
+        "Cwe259",
+        "UseOfHardcodedCredentials"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0569",
+      "predicted": [],
+      "actual": [
+        "Cwe521"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1404",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0652",
+      "predicted": [],
+      "actual": [
+        "Cwe59",
+        "Windows"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1546",
+      "predicted": [
+        "Cross-Site Scripting"
+      ],
+      "actual": [
+        "CrossSiteScripting",
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.667,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "Cross-Site Scripting"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-20038",
+      "predicted": [],
+      "actual": [
+        "Cwe321",
+        "UseOfHardcodedCredentials",
+        "Cisco"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0857",
+      "predicted": [],
+      "actual": [
+        "Cwe286"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0021",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0451",
+      "predicted": [],
+      "actual": [
+        "Cwe284"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 2,
+      "all_runs": [
+        [],
+        [],
+        [
+          "Authentication Bypass",
+          "Information Disclosure"
+        ]
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1419",
+      "predicted": [],
+      "actual": [
+        "Cwe233"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1097",
+      "predicted": [],
+      "actual": [
+        "CodeInjection",
+        "Cwe77"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0441",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0631",
+      "predicted": [],
+      "actual": [
+        "SqlInjection",
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [],
+        [
+          "SQL Injection"
+        ],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1089",
+      "predicted": [],
+      "actual": [
+        "CrossSiteRequestForgery",
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0253",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1247",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0271",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1175",
+      "predicted": [
+        "Buffer Overflow"
+      ],
+      "actual": [
+        "Cwe131"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "Buffer Overflow"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1111",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-20075",
+      "predicted": [],
+      "actual": [
+        "Cwe78",
+        "Cwe77",
+        "Cisco"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0805",
+      "predicted": [],
+      "actual": [
+        "MissingAuthorization"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0126",
+      "predicted": [
+        "Pre-Authentication Vulnerability",
+        "Path Traversal",
+        "Information Disclosure"
+      ],
+      "actual": [
+        "PathTraversal"
+      ],
+      "metrics": {
+        "precision": 0.333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 1,
+        "fp": 2,
+        "fn": 0
+      },
+      "run_variance": 3,
+      "all_runs": [
+        [
+          "Pre-Authentication Vulnerability",
+          "Path Traversal",
+          "Information Disclosure"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1596",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1867",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0362",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1234",
+      "predicted": [
+        "Domain Spoofing"
+      ],
+      "actual": [],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "Domain Spoofing"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0207",
+      "predicted": [],
+      "actual": [
+        "Cwe732"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1918",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0898",
+      "predicted": [],
+      "actual": [
+        "Cwe427"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 2,
+      "all_runs": [
+        [],
+        [],
+        [
+          "Code Execution",
+          "DLL Hijacking"
+        ]
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1185",
+      "predicted": [],
+      "actual": [
+        "UnrestrictedFileUpload"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-2001",
+      "predicted": [],
+      "actual": [
+        "Cwe290"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0736",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0260",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [],
+        [],
+        [
+          "SQL Injection"
+        ]
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0129",
+      "predicted": [],
+      "actual": [
+        "Cwe787"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0824",
+      "predicted": [],
+      "actual": [
+        "CrossSiteRequestForgery",
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 2,
+      "all_runs": [
+        [],
+        [
+          "Cross-Site Scripting",
+          "Cross-Site Request Forgery"
+        ],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1073",
+      "predicted": [],
+      "actual": [
+        "Linux",
+        "Cwe787",
+        "BufferOverflow"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0278",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0852",
+      "predicted": [],
+      "actual": [
+        "Cwe121",
+        "Cwe787"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0313",
+      "predicted": [
+        "Cross-Site Scripting"
+      ],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "Cross-Site Scripting"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1286",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1020",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1694",
+      "predicted": [],
+      "actual": [
+        "Cwe269"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [],
+        [],
+        [
+          "Privilege Escalation"
+        ]
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1242",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0602",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1245",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1237",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [],
+        [
+          "Cross-Site Scripting"
+        ],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0770",
+      "predicted": [],
+      "actual": [
+        "Cwe121",
+        "Cwe787"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0979",
+      "predicted": [],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0261",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0608",
+      "predicted": [
+        "Cross-Site Scripting"
+      ],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "Cross-Site Scripting"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1972",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0875",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1704",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [],
+        [],
+        [
+          "Cross-Site Scripting"
+        ]
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0996",
+      "predicted": [],
+      "actual": [
+        "Cwe120"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-20069",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting",
+        "Cisco"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0794",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1152",
+      "predicted": [],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0224",
+      "predicted": [],
+      "actual": [
+        "SqlInjection",
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [],
+        [],
+        [
+          "SQL Injection"
+        ]
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0827",
+      "predicted": [
+        "Cross-Site Scripting"
+      ],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "Cross-Site Scripting"
+        ],
+        [
+          "Cross-Site Scripting"
+        ],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0107",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [],
+        [],
+        [
+          "Cross-Site Scripting"
+        ]
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1142",
+      "predicted": [],
+      "actual": [
+        "PathTraversal"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1393",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0995",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0254",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0771",
+      "predicted": [
+        "SQL Injection"
+      ],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "SQL Injection"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1841",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1320",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1702",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [],
+        [],
+        [
+          "Cross-Site Scripting"
+        ]
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0487",
+      "predicted": [],
+      "actual": [
+        "SqlInjection",
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0970",
+      "predicted": [],
+      "actual": [
+        "Cwe787",
+        "Cwe120",
+        "OutOfBoundsRead"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0470",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0878",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [],
+        [
+          "Cross-Site Scripting"
+        ],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-20005",
+      "predicted": [],
+      "actual": [
+        "Cisco"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0955",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1535",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1361",
+      "predicted": [
+        "SQL Injection"
+      ],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "SQL Injection"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1241",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0461",
+      "predicted": [],
+      "actual": [
+        "Linux",
+        "Cwe416"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1875",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [],
+        [],
+        [
+          "Cross-Site Scripting"
+        ]
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1767",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0306",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1705",
+      "predicted": [],
+      "actual": [
+        "Windows",
+        "MissingAuthorization"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0257",
+      "predicted": [],
+      "actual": [
+        "UnrestrictedFileUpload"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1947",
+      "predicted": [],
+      "actual": [
+        "CodeInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 2,
+      "all_runs": [
+        [],
+        [],
+        [
+          "Remote Code Execution",
+          "Code Injection"
+        ]
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0532",
+      "predicted": [],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0637",
+      "predicted": [],
+      "actual": [
+        "Cwe787",
+        "BufferOverflow"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1485",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0646",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1790",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1566",
+      "predicted": [
+        "SQL Injection"
+      ],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "SQL Injection"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1145",
+      "predicted": [],
+      "actual": [
+        "DeserializationOfUntrustedData"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1459",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0332",
+      "predicted": [],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1056",
+      "predicted": [],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1054",
+      "predicted": [
+        "SQL Injection"
+      ],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "SQL Injection"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1290",
+      "predicted": [],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1368",
+      "predicted": [],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0847",
+      "predicted": [],
+      "actual": [
+        "Cwe787"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1398",
+      "predicted": [],
+      "actual": [
+        "PathTraversal",
+        "Cwe24"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0061",
+      "predicted": [
+        "Cross-Site Scripting"
+      ],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "Cross-Site Scripting"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1629",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0534",
+      "predicted": [],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1567",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1961",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1383",
+      "predicted": [
+        "Privilege Escalation",
+        "Improper Enforcement of Behavioral Workflow"
+      ],
+      "actual": [
+        "Cwe841"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "run_variance": 2,
+      "all_runs": [
+        [
+          "Privilege Escalation",
+          "Improper Enforcement of Behavioral Workflow"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1690",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0902",
+      "predicted": [],
+      "actual": [
+        "CrossSiteScripting"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1739",
+      "predicted": [],
+      "actual": [
+        "UnrestrictedFileUpload"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1497",
+      "predicted": [],
+      "actual": [
+        "UnrestrictedFileUpload"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1003",
+      "predicted": [],
+      "actual": [
+        "CodeInjection",
+        "Windows"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0533",
+      "predicted": [
+        "SQL Injection"
+      ],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "SQL Injection"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0938",
+      "predicted": [],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1164",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0640",
+      "predicted": [],
+      "actual": [
+        "Cwe77"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1253",
+      "predicted": [],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0025",
+      "predicted": [
+        "Information Disclosure"
+      ],
+      "actual": [],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "Information Disclosure"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1956",
+      "predicted": [],
+      "actual": [
+        "PathTraversal"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1626",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0887",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1329",
+      "predicted": [
+        "Remote Code Execution",
+        "Buffer Overflow"
+      ],
+      "actual": [
+        "Cwe120"
+      ],
+      "metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "run_variance": 2,
+      "all_runs": [
+        [
+          "Remote Code Execution",
+          "Buffer Overflow"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1736",
+      "predicted": [],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0670",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1352",
+      "predicted": [],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-20033",
+      "predicted": [],
+      "actual": [
+        "Cwe770",
+        "Cisco"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0530",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [],
+        [
+          "SQL Injection"
+        ],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1953",
+      "predicted": [],
+      "actual": [],
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1484",
+      "predicted": [],
+      "actual": [
+        "UnrestrictedFileUpload"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-0942",
+      "predicted": [],
+      "actual": [
+        "Wordpress"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1858",
+      "predicted": [],
+      "actual": [
+        "InformationDisclosure"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1495",
+      "predicted": [],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1468",
+      "predicted": [
+        "SQL Injection"
+      ],
+      "actual": [
+        "SqlInjection"
+      ],
+      "metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_variance": 1,
+      "all_runs": [
+        [
+          "SQL Injection"
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-1625",
+      "predicted": [],
+      "actual": [
+        "Cwe202"
+      ],
+      "metrics": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "run_variance": 0,
+      "all_runs": [
+        [],
+        [],
+        []
+      ]
+    }
+  ]
+}
