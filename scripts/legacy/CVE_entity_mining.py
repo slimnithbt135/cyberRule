@@ -356,13 +356,13 @@ def process_cves():
         with open(INPUT_FILE, "r", encoding="utf-8") as f:
             records = json.load(f)[:MAX_CVES]
     except Exception as e:
-        print(f"❌ Error reading input file: {str(e)}")
+        print(f" Error reading input file: {str(e)}")
         raise
 
     results = []
     start_time = time()
     
-    print(f"⚡ Processing {len(records)} CVEs with advanced pattern matching...")
+    print(f" Processing {len(records)} CVEs with advanced pattern matching...")
     for i, item in enumerate(records, 1):
         try:
             extracted = extract_terms(item['prompt_input'])
@@ -379,7 +379,7 @@ def process_cves():
                 print(f"  {i}/{len(records)} ({elapsed:.1f}min) | Last 10: {found} with findings")
                 
         except Exception as e:
-            print(f"⚠️ Error on CVE {item['id']}: Using minimal fallback")
+            print(f" Error on CVE {item['id']}: Using minimal fallback")
             results.append({
                 "id": item["id"],
                 "prompt_input": item["prompt_input"],
@@ -398,11 +398,11 @@ def process_cves():
     
     success_count = sum(1 for r in results if r["llm_output"]["classes"])
     total_time = (time() - start_time) / 60
-    print(f"✅ Done! Processed {len(results)} CVEs ({success_count} with findings) in {total_time:.1f}min")
-    print(f"📁 Results saved to: {OUTPUT_FILE}")
+    print(f" Done! Processed {len(results)} CVEs ({success_count} with findings) in {total_time:.1f}min")
+    print(f" Results saved to: {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     try:
         process_cves()
     except Exception as e:
-        print(f"❌ Script failed: {str(e)}")
+        print(f" Script failed: {str(e)}")
