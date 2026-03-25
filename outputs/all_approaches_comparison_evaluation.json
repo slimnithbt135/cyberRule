@@ -1,0 +1,345 @@
+{
+  "common_cves": 151,
+  "systems": {
+    "cyberrule": {
+      "name": "CyberRule V2",
+      "precision": 0.567,
+      "recall": 0.465,
+      "f1": 0.511,
+      "tp": 72,
+      "fp": 55,
+      "fn": 83
+    },
+    "regex": {
+      "name": "Regex Baseline",
+      "precision": 0.5,
+      "recall": 0.188,
+      "f1": 0.273,
+      "tp": 9,
+      "fp": 9,
+      "fn": 39
+    },
+    "baseline": {
+      "name": "Simple Baseline",
+      "precision": 0.438,
+      "recall": 0.146,
+      "f1": 0.219,
+      "tp": 7,
+      "fp": 9,
+      "fn": 41
+    },
+    "llama": {
+      "name": "Llama 3.3",
+      "precision": 0.462,
+      "recall": 0.125,
+      "f1": 0.197,
+      "tp": 6,
+      "fp": 7,
+      "fn": 42
+    }
+  },
+  "comparison_table": [
+    {
+      "system": "CyberRule V2",
+      "key": "cyberrule",
+      "precision": 0.567,
+      "recall": 0.465,
+      "f1": 0.511,
+      "tp": 72,
+      "fp": 55,
+      "fn": 83,
+      "deterministic": true
+    },
+    {
+      "system": "Regex Baseline",
+      "key": "regex",
+      "precision": 0.5,
+      "recall": 0.188,
+      "f1": 0.273,
+      "tp": 9,
+      "fp": 9,
+      "fn": 39,
+      "deterministic": true
+    },
+    {
+      "system": "Simple Baseline",
+      "key": "baseline",
+      "precision": 0.438,
+      "recall": 0.146,
+      "f1": 0.219,
+      "tp": 7,
+      "fp": 9,
+      "fn": 41,
+      "deterministic": true
+    },
+    {
+      "system": "Llama 3.3",
+      "key": "llama",
+      "precision": 0.462,
+      "recall": 0.125,
+      "f1": 0.197,
+      "tp": 6,
+      "fp": 7,
+      "fn": 42,
+      "deterministic": false
+    }
+  ],
+  "bootstrap_ci": {
+    "cyberrule": {
+      "precision": {
+        "mean": 0.566,
+        "std": 0.04,
+        "median": 0.566,
+        "ci_lower": 0.488,
+        "ci_upper": 0.64
+      },
+      "recall": {
+        "mean": 0.465,
+        "std": 0.042,
+        "median": 0.465,
+        "ci_lower": 0.385,
+        "ci_upper": 0.551
+      },
+      "f1": {
+        "mean": 0.51,
+        "std": 0.038,
+        "median": 0.51,
+        "ci_lower": 0.438,
+        "ci_upper": 0.588
+      },
+      "n_iterations": 1000
+    },
+    "regex": {
+      "precision": {
+        "mean": 0.381,
+        "std": 0.028,
+        "median": 0.38,
+        "ci_lower": 0.324,
+        "ci_upper": 0.433
+      },
+      "recall": {
+        "mean": 0.452,
+        "std": 0.04,
+        "median": 0.452,
+        "ci_lower": 0.375,
+        "ci_upper": 0.529
+      },
+      "f1": {
+        "mean": 0.413,
+        "std": 0.031,
+        "median": 0.412,
+        "ci_lower": 0.353,
+        "ci_upper": 0.471
+      },
+      "n_iterations": 1000
+    },
+    "baseline": {
+      "precision": {
+        "mean": 0.109,
+        "std": 0.018,
+        "median": 0.11,
+        "ci_lower": 0.076,
+        "ci_upper": 0.146
+      },
+      "recall": {
+        "mean": 0.18,
+        "std": 0.03,
+        "median": 0.18,
+        "ci_lower": 0.125,
+        "ci_upper": 0.238
+      },
+      "f1": {
+        "mean": 0.136,
+        "std": 0.022,
+        "median": 0.136,
+        "ci_lower": 0.095,
+        "ci_upper": 0.179
+      },
+      "n_iterations": 1000
+    },
+    "llama": {
+      "precision": {
+        "mean": 0.436,
+        "std": 0.1,
+        "median": 0.432,
+        "ci_lower": 0.24,
+        "ci_upper": 0.65
+      },
+      "recall": {
+        "mean": 0.078,
+        "std": 0.022,
+        "median": 0.077,
+        "ci_lower": 0.04,
+        "ci_upper": 0.124
+      },
+      "f1": {
+        "mean": 0.132,
+        "std": 0.034,
+        "median": 0.13,
+        "ci_lower": 0.069,
+        "ci_upper": 0.203
+      },
+      "n_iterations": 1000
+    }
+  },
+  "mcnemar_test": {
+    "CyberRule V2 vs Regex Baseline": {
+      "contingency_table": {
+        "a": 65,
+        "b": 7,
+        "c": 26,
+        "d": 57
+      },
+      "b": 7,
+      "c": 26,
+      "discordant_total": 33,
+      "statistic": 9.8182,
+      "pvalue": 0.001728,
+      "significant": true,
+      "significance_level": "**",
+      "winner": "Regex Baseline",
+      "interpretation": "Significant"
+    },
+    "CyberRule V2 vs Simple Baseline": {
+      "contingency_table": {
+        "a": 43,
+        "b": 29,
+        "c": 7,
+        "d": 76
+      },
+      "b": 29,
+      "c": 7,
+      "discordant_total": 36,
+      "statistic": 12.25,
+      "pvalue": 0.000465,
+      "significant": true,
+      "significance_level": "***",
+      "winner": "CyberRule V2",
+      "interpretation": "Significant"
+    },
+    "CyberRule V2 vs Llama 3.3": {
+      "contingency_table": {
+        "a": 12,
+        "b": 60,
+        "c": 0,
+        "d": 83
+      },
+      "b": 60,
+      "c": 0,
+      "discordant_total": 60,
+      "statistic": 58.0167,
+      "pvalue": 0.0,
+      "significant": true,
+      "significance_level": "***",
+      "winner": "CyberRule V2",
+      "interpretation": "Significant"
+    },
+    "Regex Baseline vs Simple Baseline": {
+      "contingency_table": {
+        "a": 48,
+        "b": 43,
+        "c": 2,
+        "d": 62
+      },
+      "b": 43,
+      "c": 2,
+      "discordant_total": 45,
+      "statistic": 35.5556,
+      "pvalue": 0.0,
+      "significant": true,
+      "significance_level": "***",
+      "winner": "Regex Baseline",
+      "interpretation": "Significant"
+    },
+    "Regex Baseline vs Llama 3.3": {
+      "contingency_table": {
+        "a": 12,
+        "b": 79,
+        "c": 0,
+        "d": 64
+      },
+      "b": 79,
+      "c": 0,
+      "discordant_total": 79,
+      "statistic": 77.0127,
+      "pvalue": 0.0,
+      "significant": true,
+      "significance_level": "***",
+      "winner": "Regex Baseline",
+      "interpretation": "Significant"
+    },
+    "Simple Baseline vs Llama 3.3": {
+      "contingency_table": {
+        "a": 10,
+        "b": 40,
+        "c": 2,
+        "d": 103
+      },
+      "b": 40,
+      "c": 2,
+      "discordant_total": 42,
+      "statistic": 32.5952,
+      "pvalue": 0.0,
+      "significant": true,
+      "significance_level": "***",
+      "winner": "Simple Baseline",
+      "interpretation": "Significant"
+    }
+  },
+  "rankings": {
+    "precision": [
+      [
+        "CyberRule V2",
+        0.567
+      ],
+      [
+        "Regex Baseline",
+        0.5
+      ],
+      [
+        "Llama 3.3",
+        0.462
+      ],
+      [
+        "Simple Baseline",
+        0.438
+      ]
+    ],
+    "recall": [
+      [
+        "CyberRule V2",
+        0.465
+      ],
+      [
+        "Regex Baseline",
+        0.188
+      ],
+      [
+        "Simple Baseline",
+        0.146
+      ],
+      [
+        "Llama 3.3",
+        0.125
+      ]
+    ],
+    "f1": [
+      [
+        "CyberRule V2",
+        0.511
+      ],
+      [
+        "Regex Baseline",
+        0.273
+      ],
+      [
+        "Simple Baseline",
+        0.219
+      ],
+      [
+        "Llama 3.3",
+        0.197
+      ]
+    ]
+  }
+}
