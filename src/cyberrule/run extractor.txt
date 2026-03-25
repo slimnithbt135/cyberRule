@@ -1,16 +1,12 @@
 # cd the working directory
 cd ....\cyberRule
 # Test mode (no input file)
-python run_extractor.py --test
 
-# With your actual data
-python run_extractor.py --input data/cve_2023_preprocessed.json --output output/results.json
-
-# Limit to 100 CVEs for quick test
-python run_extractor.py --input data/cve_2023_preprocessed.json --max 100 --output output/test_100.json
+#Cyberrule Extractor Final
+…\cyberRule>python patterns/CyberRule_Entity_Extractor_V2.py --input  data/cve_2023_enriched.json --output outputs/results_pattern_extraction_V2.json
 
 #sample distribution
 python tools/sample_ground_truth.py data/cve_2023_preprocessed.json -o annotations -n 314 --stats
 
 set GROQ_API_KEY="your GROQ key"
-python evaluation/evaluate_groq_standalone.py --max 100
+python evaluation/evaluate_groq_standalone.py --max 151
