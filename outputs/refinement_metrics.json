@@ -1,0 +1,66 @@
+{
+  "dataset_info": {
+    "total_cves": 2000,
+    "description": "SQL injection pattern evolution comparison"
+  },
+  "versions": {
+    "V1_BASIC": {
+      "version": "V1_BASIC",
+      "description": "basic keyword match (\"SQL injection\")",
+      "linguistic_variants": 1,
+      "expected_precision": 0.27,
+      "measured_precision": 0.15,
+      "coverage_rate": 0.0,
+      "cves_with_detection": 0,
+      "total_detections": 0,
+      "average_confidence": 0,
+      "context_validation_rate": null,
+      "verb_validation_rate": null
+    },
+    "V2_CONTEXT": {
+      "version": "V2_CONTEXT",
+      "description": "added context constraints",
+      "linguistic_variants": 2,
+      "expected_precision": 0.69,
+      "measured_precision": 0.7,
+      "coverage_rate": 12.4,
+      "cves_with_detection": 248,
+      "total_detections": 266,
+      "average_confidence": 0.69,
+      "context_validation_rate": 1.0,
+      "verb_validation_rate": null
+    },
+    "V3_VERB_PROXIMITY": {
+      "version": "V3_VERB_PROXIMITY",
+      "description": "added verb-proximity constraints",
+      "linguistic_variants": 3,
+      "expected_precision": 0.87,
+      "measured_precision": 0.86,
+      "coverage_rate": 12.4,
+      "cves_with_detection": 248,
+      "total_detections": 266,
+      "average_confidence": 0.827,
+      "context_validation_rate": 1.0,
+      "verb_validation_rate": 0.752
+    },
+    "V4_FULL": {
+      "version": "V4_FULL",
+      "description": "final refinement with 12 linguistic variants",
+      "linguistic_variants": 12,
+      "expected_precision": 0.94,
+      "measured_precision": 0.93,
+      "coverage_rate": 12.4,
+      "cves_with_detection": 248,
+      "total_detections": 268,
+      "average_confidence": 0.939,
+      "context_validation_rate": 1.0,
+      "verb_validation_rate": 0.757
+    }
+  },
+  "progression_summary": {
+    "precision_improvement": 0.78,
+    "coverage_improvement": 12.4,
+    "variants_increase": 11,
+    "key_insight": "Each version adds constraints improving precision at potential coverage cost"
+  }
+}
