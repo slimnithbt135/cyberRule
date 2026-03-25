@@ -12,7 +12,7 @@ stored in cve_2023_enriched.json. It computes basic statistics such as:
 Usage:
     python scripts/analyze_enriched_output.py
 Author: Thabet Slimani
-Repository: https://github.com/slimnithbt135/cyberonto-llm-enrichment
+Repository: https://github.com/slimnithbt135/cyberRule
 License: MIT
 Dependencies:
     - Python 3.7+
