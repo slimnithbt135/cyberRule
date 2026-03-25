@@ -8,5 +8,4 @@ cd ....\cyberRule
 #sample distribution
 python tools/sample_ground_truth.py data/cve_2023_preprocessed.json -o annotations -n 314 --stats
 
-set GROQ_API_KEY="your GROQ key"
-python evaluation/evaluate_groq_standalone.py --max 151
+
