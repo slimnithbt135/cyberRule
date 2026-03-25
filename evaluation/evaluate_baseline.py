@@ -125,6 +125,6 @@ def evaluate_baseline(reference_file: str, output_file: str):
 
 if __name__ == '__main__':
     evaluate_baseline(
-        'evaluation/reference_standard_200.json',
-        'evaluation/baseline_evaluation.json'
+        'data/reference_standard_200.json',
+        'data/baseline_evaluation.json'
     )
