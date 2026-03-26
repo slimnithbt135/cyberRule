@@ -4,14 +4,14 @@
  CyberRule delivers forensic-grade reproducibility: zero output variance versus LLMs' 12% deviation and superior F1-score (0.511) over regex (0.273) and keyword (0.219) baselines—enabling auditable, compliance-ready cybersecurity extraction. Systems based on a rule (CyberRule, Regex Baseline, Simple Baseline) are deterministic and yielded the same results on repeated executions
 
 
-## **Fetch CVE data from NVD directory**
+#**Fetch CVE data from NVD directory**
 
 inputs:NVD feed URL (https://nvd.nist.gov/...)
 outputs:data/cve_2023_sample.json 
 ```bash
 python scripts/legacy/fetch_cve_data_from_feed.py 
 ```
-## ** CVE Processing: Text cleaning **
+#** CVE Processing: Text cleaning **
 
 inputs: data/cve_2023_sample.json
 outputs: data/cve_2023_preprocessed.json
@@ -31,6 +31,7 @@ inputs: data/cve_2023_enriched.json
 outputs: outputs/results_pattern_extraction_V2.json
 ```bash
 python patterns/CyberRule_Entity_Extractor_V2.py --input  data/cve_2023_enriched.json --output outputs/results_pattern_extraction_V2.json ```
+
 ## **Quick Results Summary: Four-Way Comparison**
 
 | Metric | CyberRule V2 | Regex Baseline | Simple Baseline | Llama 3.3 (70B) |
