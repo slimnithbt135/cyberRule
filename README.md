@@ -69,7 +69,7 @@ authentication bypass via crafted HTTP request..."
 | Directory | Contents | Paper Section |
 |-----------|----------|---------------|
 | `src/cyberrule/` | Core extraction engine (`CyberRule_Entity_Extractor_V2.py`) | §3.1-3.3 |
-| `scripts/legacy/` | Original research scripts (superseded but reproducible) used cve_ontology_enricher | §4, Appendix |
+| `scripts/legacy/` | Original research scripts (superseded but reproducible) used CVE_entity_mining.py to produce  | §4, Appendix |
 | `evaluation/` | Benchmarking vs. LLMs and baselines | §5.1-5.6 |
 | `data/` | Input CVEs and ground truth annotations | §4.1-4.2 |
 | `outputs/` | Generated JSON, TTL, OWL, evaluation reports | §5 |
