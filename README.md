@@ -10,10 +10,10 @@
 
 | Metric | CyberRule V2 | Regex Baseline | Simple Baseline | Llama 3.3 (70B) |
 |--------|-------------|----------------|-----------------|-----------------|
-| **Precision** | **56.7%** ✅ | 50.0% | 43.8% | 46.2% |
-| **Recall** | **46.5%** ✅ | 18.8% | 14.6% | 12.5% |
-| **F1-Score** | **0.511** ✅ | 0.273 | 0.219 | 0.197 |
-| **Deterministic?** | ✅ **Yes** | ✅ Yes | ✅ Yes | ❌ No |
+| **Precision** | **56.7%**  | 50.0% | 43.8% | 46.2% |
+| **Recall** | **46.5%**  | 18.8% | 14.6% | 12.5% |
+| **F1-Score** | **0.511**  | 0.273 | 0.219 | 0.197 |
+| **Deterministic?** |  **Yes** |  Yes |  Yes |  No |
 | **Output Variance** | **0** | 0 | 0 | 0.31 entities/CVE |
 
 *Table 2 & Table 8 from paper: Entity-level evaluation on 151-CVE reference standard*
