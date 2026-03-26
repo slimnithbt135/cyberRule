@@ -18,25 +18,8 @@ WHERE {
 LIMIT 10
 ```
 
-📄 Run with: [`scripts/sparql_query_example.py`](legacy/scripts/sparql_query_example.py)
+📄 Run with: [`scripts/legacy/sparql_query_example.py`](scripts/legacy/sparql_query_example.py)
 
----
-
-### 🔐 Query 2: Vulnerabilities Requiring Administrator Privileges
-
-This query retrieves all vulnerabilities that require admin-level access:
-
-```sparql
-PREFIX : <http://example.org/ontology#>
-SELECT ?vuln
-WHERE {
-  ?vuln :requires :Administrator .
-}
-```
-
-📄 Run with: [`scripts/sparql_admin_privileges.py`](scripts/sparql_admin_privileges.py)
-
----
 
 ### 🔗 Sample Result (Admin Privileges Query)
 
