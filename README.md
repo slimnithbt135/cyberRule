@@ -474,7 +474,6 @@ make test
 | Extension | Description | Tool | Paper Section |
 |-----------|-------------|------|---------------|
 | `.json` | Structured extractions with provenance | CyberRule engine | §3.3 |
-| `.ttl` | Turtle RDF triples | `generate_rdf_from_cyberrule.py` | §3.4 |
 | `.owl` | OWL-DL ontology (HermiT-validated) | `convert_to_owl.py` | §3.4, Fig 2 |
 
 ---
