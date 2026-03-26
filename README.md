@@ -1,8 +1,6 @@
-# CyberRule: Deterministic Ontology Population for Reproducible Cybersecurity Knowledge Extraction from CVE Descriptions
-
 **A deterministic, rule-based extraction engine that converts CVE descriptions into structured OWL ontologies with complete auditability and zero output variance.**
 
-> **Key Innovation**: Unlike LLMs that produce non-deterministic outputs (up to 12% deviation between runs), CyberRule guarantees identical results on every execution—critical for forensic auditability and compliance in security operations.
+> **Key Innovation**: CyberRule delivers forensic-grade reproducibility: zero output variance versus LLMs' 12% deviation and superior F1-score (0.511) over regex (0.273) and keyword (0.219) baselines—enabling auditable, compliance-ready cybersecurity extraction. Systems based on a rule (CyberRule, Regex Baseline, Simple Baseline) are deterministic and yielded the same results on repeated executions
 
 ---
 
@@ -23,7 +21,7 @@
 - CyberRule vs. Simple Baseline: p < 0.0001 (***)
 - CyberRule vs. Llama 3.3: p < 0.0001 (***)
 
----
+
 
 ## **Quick Start**
 
@@ -41,8 +39,6 @@ make extract    # Run CyberRule extraction engine
 make evaluate   # Compare against all baselines and LLMs
 make convert    # Generate OWL/TTL ontologies
 ```
-
----
 
 ## **What It Does**
 
@@ -67,18 +63,17 @@ authentication bypass via crafted HTTP request..."
 }
 ```
 
----
 
 ## **Repository Structure**
 
 | Directory | Contents | Paper Section |
 |-----------|----------|---------------|
-| `src/cyberrule/` | Core extraction engine (`extractor.py`, `patterns_data.py`) | §3.1-3.3 |
-| `scripts/legacy/` | Original research scripts (superseded but reproducible) | §4, Appendix |
+| `src/cyberrule/` | Core extraction engine (`CyberRule_Entity_Extractor_V2.py`) | §3.1-3.3 |
+| `scripts/legacy/` | Original research scripts (superseded but reproducible) used cve_ontology_enricher | §4, Appendix |
 | `evaluation/` | Benchmarking vs. LLMs and baselines | §5.1-5.6 |
 | `data/` | Input CVEs and ground truth annotations | §4.1-4.2 |
 | `outputs/` | Generated JSON, TTL, OWL, evaluation reports | §5 |
-| `patterns/` | 16-category regex pattern definitions | §3.2, Table 1 |
+| `patterns/` | 16-category regex pattern definitions with 170+ type | §3.2, Table 1 |
 | `queries/` | SPARQL queries for ontology validation | §5.5 |
 
 ---
