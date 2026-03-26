@@ -412,13 +412,13 @@ CyberRule uses **16 semantic pattern categories** with **170+ compiled regular e
 
 | Criterion | CyberRule | Regex Baseline | Simple Baseline | Llama 3.3 (70B) |
 |-----------|-----------|----------------|-----------------|-----------------|
-| **Precision** | **56.7%** 🥇 | 50.0% | 43.8% | 46.2% |
-| **Recall** | **46.5%** 🥇 | 18.8% | 14.6% | 12.5% |
-| **F1-Score** | **0.511** 🥇 | 0.273 | 0.219 | 0.197 |
-| **Determinism** | ✅ **Yes** | ✅ Yes | ✅ Yes | ❌ No |
+| **Precision** | **56.7%**  | 50.0% | 43.8% | 46.2% |
+| **Recall** | **46.5%**  | 18.8% | 14.6% | 12.5% |
+| **F1-Score** | **0.511**  | 0.273 | 0.219 | 0.197 |
+| **Determinism** |  **Yes** | Yes |  Yes |  No |
 | **Output Variance** | **0** | 0 | 0 | 0.31 entities/CVE |
-| **Reproducibility** | ✅ **Complete** | ✅ Complete | ✅ Complete | ❌ Stochastic |
-| **Auditability** | ✅ **Full provenance** | ✅ Full | ✅ Full | ❌ Black box |
+| **Reproducibility** |  **Complete** |  Complete |  Complete |  Stochastic |
+| **Auditability** |  **Full provenance** | Full |  Full |  Black box |
 | **Speed** | **1,505 CVEs/sec** | Similar | Similar | API-limited |
 | **Cost** | **Free (CPU only)** | Free | Free | API tokens |
 
