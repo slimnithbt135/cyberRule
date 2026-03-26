@@ -496,7 +496,26 @@ make test
 
 **Future Work**: Hybrid neuro-symbolic architectures using CyberRule as deterministic validation layer for neural candidate generation (Section 6.4).
 
----
+## **Statistical Evaluation & Sample Size Validation**
+McNemar's Test Sample Size Justification (Appendix A.3):The evaluation uses McNemar's test for paired significance testing on the 151-CVE reference standard. The sample size was statistically validated using the formula:
+
+```bash
+n = (Z_(α/2) + Z_β)² × pD / δ²
+```
+#*Validation Results*
+
+| Comparison                   | Effect Size (δ) | Required n | Our Sample |
+| ---------------------------- | --------------- | ---------- | ---------- |
+| CyberRule vs Regex Baseline  | 0.238           | 31         | 151 ✓      |
+| CyberRule vs Simple Baseline | 0.292           | 21         | 151 ✓      |
+| CyberRule vs Llama 3.3       | 0.314           | 18         | 151 ✓      |
+
+#*Reproducibility*
+Run the sample size validation:
+
+```bash
+python sample_size_calculator.py
+```
 
 ## **Complete Evaluation Matrix**
 
@@ -511,7 +530,7 @@ make test
 | `CyberRule_SQL_Pattern_Refinement.py` | §5.4, Fig 9 | `refinement_metrics.json` | 27%→94% precision |
 | `CyberRule_Priority_Tier_Engine.py` | §3.3, §5.2 | `priority_extraction_results.json` | 11-tier breakdown |
 
----
+
 
 **Repository**: https://github.com/slimnithbt135/cyberRule  
 **Paper Commit**: `7ba1813`  
