@@ -5,27 +5,31 @@
 
 
 ## **Fetch CVE data from NVD directory**
-```bash
+
 inputs:NVD feed URL (https://nvd.nist.gov/...)
 outputs:data/cve_2023_sample.json 
+```bash
 python scripts/legacy/fetch_cve_data_from_feed.py 
 ```
 ## ** CVE Processing: Text cleaning **
-```bash
+
 inputs: data/cve_2023_sample.json
 outputs: data/cve_2023_preprocessed.json
+```bash
 python scripts/legacy/preprocess_cve_data.py
 ```
 ## ** Pattern matching across 300+ rules **
-```bash
+
 inputs: data/cve_2023_preprocessed.json
 outputs: data/cve_2023_enriched.json
+```bash
 python scripts/legacy/CVE_entity_mining.py
 ```
 ## ** Creating comprehensive Pattern Taxonomy spanning 16 semantic categorie across 170+ manually-engineered regex patterns for Entities Extraction**
-```bash
+
 inputs: data/cve_2023_enriched.json
 outputs: outputs/results_pattern_extraction_V2.json
+```bash
 python patterns/CyberRule_Entity_Extractor_V2.py --input  data/cve_2023_enriched.json --output outputs/results_pattern_extraction_V2.json ```
 ## **Quick Results Summary: Four-Way Comparison**
 
