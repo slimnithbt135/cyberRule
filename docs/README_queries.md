@@ -18,7 +18,7 @@ WHERE {
 LIMIT 10
 ```
 
-📄 Run with: [`scripts/sparql_query_example.py`](scripts/sparql_query_example.py)
+📄 Run with: [`scripts/sparql_query_example.py`](legacy/scripts/sparql_query_example.py)
 
 ---
 
