@@ -1,8 +1,7 @@
 **A deterministic, rule-based extraction engine that converts CVE descriptions into structured OWL ontologies with complete auditability and zero output variance.**
 
  **Key Innovation**: 
- CyberRule delivers forensic-grade reproducibility: zero output variance versus LLMs' 12% deviation and superior F1-score (0.511) over regex (0.273) and keyword (0.219) baselines—enabling auditable, compliance-ready cybersecurity extraction. Systems based on a rule (CyberRule, Regex Baseline, Simple Baseline) are deterministic and yielded the same results on repeated executions
-
+ CyberRule delivers forensic-grade reproducibility: zero output variance versus LLMs' 12% deviation and superior F1-score (0.511) over regex (0.273) and keyword (0.219) baselines—enabling auditable, compliance-ready cybersecurity extraction. Systems based on a rule (CyberRule, Regex Baseline, Simple Baseline) are deterministic and yielded the same results on repeated executions.
 
 **Fetch CVE data from NVD directory**
 
@@ -11,8 +10,7 @@ outputs:data/cve_2023_sample.json
 ```bash
 python scripts/legacy/fetch_cve_data_from_feed.py 
 ```
-**CVE Processing: Text cleaning **
-
+**CVE Processing: Text cleaning**
 inputs: data/cve_2023_sample.json
 outputs: data/cve_2023_preprocessed.json
 ```bash
