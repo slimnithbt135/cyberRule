@@ -533,5 +533,5 @@ python sample_size_calculator.py
 
 
 **Repository**: https://github.com/slimnithbt135/cyberRule  
-**Paper Commit**: `7ba1813`  
+** Commit**: `b69abb63b02efe26cd5a500548ad87d07db5335a`  
 **License**: MIT
