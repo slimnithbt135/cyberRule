@@ -26,10 +26,10 @@ outputs: data/cve_2023_enriched.json
 ```bash
 python scripts/legacy/CVE_entity_mining.py
 ```
-
-** Creating comprehensive Pattern Taxonomy spanning 16 semantic categorie across 170+ manually-engineered regex patterns for Entities Extraction**
+**Creating comprehensive Pattern Taxonomy spanning 16 semantic categorie across 170+ manually-engineered regex patterns for Entities Extraction**
 
 inputs: data/cve_2023_enriched.json
+
 outputs: outputs/results_pattern_extraction_V2.json
 ```bash
 python patterns/CyberRule_Entity_Extractor_V2.py --input  data/cve_2023_enriched.json --output outputs/results_pattern_extraction_V2.json ```
