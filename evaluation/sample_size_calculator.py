@@ -1,17 +1,11 @@
 #!/usr/bin/env python3
 """
-Table A.2.2 Generator - Calculated from Actual Observed Data
+Calculated from Actual Observed Data
 ============================================================
-
 This script calculates sample size requirements using ACTUAL parameters
 from the integrated performance analysis:
-- Effect sizes: 0.238, 0.292, 0.314 (observed F1 improvements)
-- Discordant proportion: 0.219 (33/151 from McNemar table)
 - Sample size: 151 CVEs
-
 Formula: n = (Z_α + Z_β)² × pD / δ²
-
-Usage: python table_a22_real.py
 """
 
 import numpy as np
