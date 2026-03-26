@@ -487,26 +487,6 @@ make test
 | `GROQ_API_KEY` not set | Required only for LLM evaluation; CyberRule runs offline |
 | Permission denied on `make` | Use `python run_extractor.py` directly |
 
----
-
-## **Citation**
-
-If using CyberRule in research, please cite:
-
-```bibtex
-@article{slimani2025cyberrule,
-  title={CyberRule: A Deterministic Ontology Population for Reproducible 
-         Cybersecurity Knowledge Extraction from CVE Descriptions},
-  author={Slimani, Thabet},
-  journal={Preprint submitted to Elsevier},
-  year={2025},
-  affiliation={Taif University, Saudi Arabia},
-  url={https://github.com/slimnithbt135/cyberRule}
-}
-```
-
----
-
 ## **Limitations (Section 6)**
 
 1. **Coverage**: 67.1% of CVEs have at least one extraction; 32.9% have no pattern matches
