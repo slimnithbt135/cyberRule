@@ -320,8 +320,6 @@ Progression Summary:
 - Variants increase: 11× (1 → 12)
 ```
 
----
-
 ### **Priority Tier Engine (Section 3.3)**
 
 ```bash
@@ -363,8 +361,8 @@ These scripts correspond to the original research pipeline (v1.2) used for paper
 |--------|-----------------|---------|--------|
 | `fetch_cve_data_from_feed.py` | §4.1 | Downloads 2023 NVD feed, extracts 2000 CVEs | **Active** |
 | `preprocess_cve_data.py` | §3.1 | Text normalization, prompt generation | **Active** |
-| `CyberRule-Enricher.py` | Table 1 | Original 60-pattern extractor (4 dictionaries) | **Superseded** by `src/cyberrule/extractor.py` |
-| `generate_rdf_from_cyberrule.py` | §3.4 | JSON → Turtle RDF conversion | **Active** |
+| `CyberRule-Enricher.py` | Table 1 | Original 60-pattern extractor (4 dictionaries) | **Superseded** by `scripts/legacy/CVE_entity_mining` |
+`tools/convert_to_owl.py` | §3.4 | JSON → turtle/OWL/RDF conversion | **Active** |
 
 ### **Execution Order (Paper Pipeline)**
 
@@ -379,11 +377,11 @@ python scripts/legacy/preprocess_cve_data.py
 
 # Step 3: Entity Extraction (§3.2-3.3)
 # Original: python scripts/legacy/CyberRule-Enricher.py
-# Current:  python -m src.cyberrule.extractor
+# Current:  python scripts/legacy/CVE_entity_mining
 # Output: data/cve_2023_enriched.json
 
 # Step 4: RDF/OWL Generation (§3.4)
-python scripts/legacy/generate_rdf_from_cyberrule.py
+python tools/convert_to_owl.py
 # Output: outputs/cyberonto_enriched.ttl → .owl
 ```
 
