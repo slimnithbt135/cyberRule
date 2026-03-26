@@ -131,7 +131,7 @@ Precision: 0.567 (72/127)
 Recall: 0.465 (72/155)
 F1-Score: 0.511
 95% CI Precision: [0.491 -- 0.644]
-95% CI Recall: [0.385 -- 0.551]
+95% CI Recall: [0.385 -- 0.551] 
 ```
 
 #### **2. Regex Baseline Evaluation (F1=0.273, Precision=50.0%, Recall=18.8%)**
