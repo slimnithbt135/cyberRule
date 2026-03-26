@@ -6,19 +6,22 @@
 **Fetch CVE data from NVD directory**
 
 inputs:NVD feed URL (https://nvd.nist.gov/...)
+
 outputs:data/cve_2023_sample.json 
 ```bash
 python scripts/legacy/fetch_cve_data_from_feed.py 
 ```
 **CVE Processing: Text cleaning**
 inputs: data/cve_2023_sample.json
+
 outputs: data/cve_2023_preprocessed.json
+
 ```bash
 python scripts/legacy/preprocess_cve_data.py
 ```
-** Pattern matching across 300+ rules **
-
+**Pattern matching across 300+ rules**
 inputs: data/cve_2023_preprocessed.json
+
 outputs: data/cve_2023_enriched.json
 ```bash
 python scripts/legacy/CVE_entity_mining.py
