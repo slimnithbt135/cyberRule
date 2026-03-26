@@ -189,7 +189,7 @@ Total variance entities across all CVEs: 47
 Bootstrap 95% CI Precision: [0.256 -- 0.643] (wide due to variance)
 ```
 
-#### **5. Generate Complete Four-Way Comparison with McNemar Tests**
+#### **5. Generate Complete 4 approaches (Cyberrule, Regex, Keyword and LLama 3) Comparison with McNemar Tests**
 
 ```bash
 python evaluation/evaluate_all_systems.py   --cyberrule data/cyberrule_v2_evaluation.json   --regex data/regex_baseline_evaluation.json   --baseline data/baseline_evaluation.json   --llama data/llama3_evaluation.json   --output outputs/all_approaches_comparison_evaluation.json
