@@ -31,8 +31,8 @@ python scripts/legacy/CVE_entity_mining.py
 inputs: data/cve_2023_enriched.json
 
 outputs: outputs/results_pattern_extraction_V2.json
-```bash
-python patterns/CyberRule_Entity_Extractor_V2.py --input  data/cve_2023_enriched.json --output outputs/results_pattern_extraction_V2.json ```
+
+```bash python patterns/CyberRule_Entity_Extractor_V2.py --input  data/cve_2023_enriched.json --output outputs/results_pattern_extraction_V2.json  ```
 ##**Quick Results Summary:**
 
 
