@@ -3,6 +3,18 @@
  **Key Innovation**: 
  CyberRule delivers forensic-grade reproducibility: zero output variance versus LLMs' 12% deviation and superior F1-score (0.511) over regex (0.273) and keyword (0.219) baselines—enabling auditable, compliance-ready cybersecurity extraction. Systems based on a rule (CyberRule, Regex Baseline, Simple Baseline) are deterministic and yielded the same results on repeated executions.
 
+ ## **Repository Structure**
+
+| Directory | Contents | Paper Section |
+|-----------|----------|---------------|
+| `src/cyberrule/` | Core extraction engine (`CyberRule_Entity_Extractor_V2.py`) | §3.1-3.3 |
+| `scripts/legacy/` | Original research scripts (superseded but reproducible) used CVE_entity_mining.py to produce cve_2023_enriched  | §4, Appendix |
+| `evaluation/` | Benchmarking vs. LLMs and baselines | §5.1-5.6 |
+| `data/` | Input CVEs and ground truth annotations | §4.1-4.2 |
+| `outputs/` | Generated JSON, TTL, OWL, evaluation reports | §5 |
+| `patterns/` | 16-category regex pattern definitions with 170+ type | §3.2, Table 1 |
+| `queries/` | SPARQL queries for ontology validation | §5.5 |
+
 **Fetch CVE data from NVD directory**
 
 inputs:NVD feed URL (https://nvd.nist.gov/...)
@@ -94,45 +106,6 @@ authentication bypass via crafted HTTP request..."
   "confidence": 0.93,
   "pattern_provenance": "VULN_PATTERNS:v4_SQLi"
 }
-```
-
-
-## **Repository Structure**
-
-| Directory | Contents | Paper Section |
-|-----------|----------|---------------|
-| `src/cyberrule/` | Core extraction engine (`CyberRule_Entity_Extractor_V2.py`) | §3.1-3.3 |
-| `scripts/legacy/` | Original research scripts (superseded but reproducible) used CVE_entity_mining.py to produce cve_2023_enriched  | §4, Appendix |
-| `evaluation/` | Benchmarking vs. LLMs and baselines | §5.1-5.6 |
-| `data/` | Input CVEs and ground truth annotations | §4.1-4.2 |
-| `outputs/` | Generated JSON, TTL, OWL, evaluation reports | §5 |
-| `patterns/` | 16-category regex pattern definitions with 170+ type | §3.2, Table 1 |
-| `queries/` | SPARQL queries for ontology validation | §5.5 |
-
-## **Fetch CVE data from NVD directory**
-```bash
-inputs:NVD feed URL (https://nvd.nist.gov/...)
-outputs:data/cve_2023_sample.json 
-python scripts/legacy/fetch_cve_data_from_feed.py 
-```
-## ** CVE Processing: Text cleaning 
-```bash
-inputs: data/cve_2023_sample.json
-outputs: data/cve_2023_preprocessed.json
-python scripts/legacy/preprocess_cve_data.py
-```
-## ** Pattern matching across 300+ rules 
-```bash
-inputs: data/cve_2023_preprocessed.json
-outputs: data/cve_2023_enriched.json
-python scripts/legacy/CVE_entity_mining.py
-
-## ** Creating comprehensive Pattern Taxonomy spanning 16 semantic categorie across 170+ manually-engineered regex patterns 
-```bash
-inputs: data/cve_2023_enriched.json
-outputs: outputs/results_pattern_extraction_V2.json
-python patterns/CyberRule_Entity_Extractor_V2.py --input  data/cve_2023_enriched.json --output outputs/results_pattern_extraction_V2.json
-                               
 ```
 ## **Reproducing Paper Results**
 
