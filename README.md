@@ -31,11 +31,12 @@ python scripts/legacy/CVE_entity_mining.py
 inputs: data/cve_2023_enriched.json
 
 outputs: outputs/results_pattern_extraction_V2.json
+
 ```bash
 python patterns/CyberRule_Entity_Extractor_V2.py --input  data/cve_2023_enriched.json --output outputs/results_pattern_extraction_V2.json ```
-
 **Quick Results Summary: Four-Way Comparison**
 
+```bash
 | Metric | CyberRule V2 | Regex Baseline | Simple Baseline | Llama 3.3 (70B) |
 |--------|-------------|----------------|-----------------|-----------------|
 | **Precision** | **56.7%**  | 50.0% | 43.8% | 46.2% |
@@ -43,6 +44,7 @@ python patterns/CyberRule_Entity_Extractor_V2.py --input  data/cve_2023_enriched
 | **F1-Score** | **0.511**  | 0.273 | 0.219 | 0.197 |
 | **Deterministic?** |  **Yes** |  Yes |  Yes |  No |
 | **Output Variance** | **0** | 0 | 0 | 0.31 entities/CVE |
+```
 
 *Table 2 & Table 8 from paper: Entity-level evaluation on 151-CVE reference standard*
 
